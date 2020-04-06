@@ -2,16 +2,16 @@ import sys
 import re
 
 if len(sys.argv) < 3 :
-	print "Usage: pyton extractOptimizedCoords.py input.log xyz|gjf"
-	print "The output file name will be input[_optimized]_out.xyz|gjf"
-	print "If optimization failed, the coordinates for the lowest energy structure will be used."
+	print ("Usage: pyton extractOptimizedCoords.py input.log xyz|gjf")
+	print ("The output file name will be input[_optimized]_out.xyz|gjf")
+	print ("If optimization failed, the coordinates for the lowest energy structure will be used.")
 	exit()
 
 finput = sys.argv[1]
 fformat = sys.argv[2]
 
 if fformat not in ["xyz", "gjf"] :
-	print "The output file format has to be either xyz or gjf"
+	print ("The output file format has to be either xyz or gjf")
 	exit()
 
 def getEnergy(structure) :
